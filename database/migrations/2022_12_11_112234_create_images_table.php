@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('image');
             $table->foreignId('album_id')->references('id')->on('albums')->cascadeOnDelete();
-            $table->softDeletes();
             $table->timestamps();
         });
     }
